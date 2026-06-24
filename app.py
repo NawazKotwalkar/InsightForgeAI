@@ -1,42 +1,51 @@
 import streamlit as st
 
-# Define application identity before any UI renders.
-# Streamlit requires this to be the first Streamlit command.
+# Define application identity before rendering any UI.
 st.set_page_config(
     page_title="InsightForge AI",
-    page_icon=":📊:",
-    layout="wide",
+    page_icon="📊",
+    layout="wide"
 )
+
 st.title("📊 InsightForge AI")
-st.subheader("Transform Raw Data into Actionable Business Decisions")
+
+st.subheader(
+    "Transform Raw Data into Actionable Business Decisions"
+)
+
 st.divider()
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric("Modules", "5")
+
+with col2:
+    st.metric("Supported Datasets", "Sales")
+
+with col3:
+    st.metric("Version", "1.0 MVP")
+
+st.markdown("## Platform Workflow")
+
 st.markdown(
     """
-    Welcome to InsightForge AI! This application is designed to help you analyze and visualize your data effectively. 
-    Whether you're looking to generate insights, create reports, or make data-driven decisions, InsightForge AI has got you covered.
-    
-    **Features:**
-    - Data Upload: Easily upload your datasets in various formats.
-    - Data Cleaning: Preprocess and clean your data for better analysis.
-    - Visualization: Create interactive charts and graphs to visualize your data.
-    - Insights Generation: Use AI-powered tools to extract meaningful insights from your data.
-    
-    Get started by uploading your dataset and exploring the powerful features of InsightForge AI!
-    ### Overview
+    📤 Upload Dataset
 
-    InsightForge AI helps organizations:
+    ↓
 
-    - Assess Data Quality
-    - Analyze Business Performance
-    - Forecast Future Revenue
-    - Generate Executive Insights
+    🛡️ Assess Data Quality
 
-    ### Workflow
+    ↓
 
-    Upload Dataset
-    → Data Quality Assessment
-    → Analytics
-    → Forecasting
-    → Executive Recommendations
+    📊 Generate Business Analytics
+
+    ↓
+
+    📈 Forecast Future Performance
+
+    ↓
+
+    🧠 Produce Executive Recommendations
     """
 )
